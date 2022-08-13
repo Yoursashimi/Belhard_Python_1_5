@@ -19,15 +19,15 @@ from typing import Union
 
 
 def processing_f(str_with_f: str) -> Union[int, str]:
-    """Выполняет действия в зависимости от количества вхождений f
-
-    :param str_with_f: строка для работы
-    :type str_with_f: str
-
-    :return: строку или индекс
-    :rtype: str
-    """
-    result = None
+    kol_f = str_with_f.count('f')
+    if kol_f == 0:
+        result = str_with_f.swapcase()
+    elif kol_f == 1:
+        result = str_with_f.find('f')
+    elif kol_f == 2:
+        result = str_with_f.rfind('f')
+    else:
+        result = str_with_f[::-1]
     return result
 
 

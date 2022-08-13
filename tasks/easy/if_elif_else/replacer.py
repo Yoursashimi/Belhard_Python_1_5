@@ -17,22 +17,11 @@
 
 
 def replacer(check_str: str, search_str: str, replace_str: str) -> str:
-    """Если search_str есть в check_str, то заменяет на replace_str,
-    если нет, то возвращает "Ошибка!"
-
-    :param check_str: строка для проверки
-    :type check_str: str
-
-    :param search_str: искомая строка
-    :type search_str: str
-
-    :param replace_str: строка для замены
-    :type replace_str: str
-
-    :return: измененная строка для проверки или строка "Ошибка!"
-    :rtype: str
-    """
-    result = None
+    if search_str in check_str:
+        new_str = check_str.replace(search_str, replace_str)
+        result = new_str.capitalize()
+    else:
+        result = "Ошибка!"
     return result
 
 

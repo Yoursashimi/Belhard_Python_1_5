@@ -36,18 +36,10 @@ from keyword import iskeyword
 
 
 def is_valid(check_string: str) -> bool:
-    """Проверяет является ли строка валидным идентификатором и одновременно
-    не является зарезервированным словом Python
-
-    :param check_string: строка для проверки
-    :type check_string: str
-
-    :return: True или False в зависимости от того, является ли валидными
-        идентификатором и не ключевым словом или нет
-    :rtype: bool
-    """
-    # TODO написать свой код здесь
-    return None
+    if check_string.isidentifier() and not iskeyword(check_string):
+        return True
+    else:
+        return False
 
 
 if __name__ == '__main__':

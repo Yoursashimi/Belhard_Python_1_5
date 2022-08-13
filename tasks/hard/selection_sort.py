@@ -19,8 +19,13 @@
 
 
 def selection_sort(array: list) -> list:
+    for i in range(len(array)):
+        min = i
+        for j in range(i + 1, len(array)):
+            if array[j] < array[min]:
+                min = j
+        array[min], array[i] = array[i], array[min]
     return array
-
 
 if __name__ == '__main__':
     assert selection_sort([2, 1, 5, 4, 7]) == [1, 2, 4, 5, 7]

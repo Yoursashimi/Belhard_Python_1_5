@@ -7,8 +7,13 @@
 
 
 def not_3(array: list) -> list:
-    return array
-
+    new_list = []
+    for i in array:
+        if i % 3 != 0:
+            new_list.append(i)
+        else:
+            continue
+    return new_list
 
 if __name__ == '__main__':
     assert not_3([2, 1, 3, 5, 6, 4, 7]) == [2, 1, 5, 4, 7]

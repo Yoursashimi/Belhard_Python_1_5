@@ -12,8 +12,13 @@ num_sum(321) -> 6
 
 
 def num_sum(numb: int) -> int:
-    result = None
-    return result
+    summa = 0
+    while numb > 0:
+        digit = numb % 10
+        summa = summa + digit
+        numb = numb // 10
+    return summa
+
 
 
 if __name__ == '__main__':
